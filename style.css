@@ -31,9 +31,11 @@ body {
     padding-bottom: 10px;
   }
   h1 {
+      text-transform: uppercase;
     position: relative;
     margin: 0 auto;
     padding-top: 2px;
+    padding-left: 20px;
     color: #ff7043;
     font-family: "Roboto", sans-serif;
   }
@@ -83,6 +85,12 @@ body {
     margin: 35px auto 100px;
     padding-top: 30px;
     padding-bottom: 340px;
+  }
+
+  footer{
+      text-align: center;
+      color:#fff;
+      font-family: "Roboto", sans-serif;
   }
   
   #search {
