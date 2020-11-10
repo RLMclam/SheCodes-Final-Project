@@ -15,91 +15,98 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-      <div class="container">
-          <form id="search-form">
-              <input type="text" id="search" placeholder=" Enter City or Zip Code "/>
-              <input type="submit" value="Search" id="buttn"/><button id="currentLocation"> Current Location </button>
-            </form>
-      </div>
-      <header id="date">
-      </header>
-      <main>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 id="currentCity">LOS ANGELES, CA</h1>
-                <h2><i class="fas fa-cloud-sun"></i>
-                <span class="currentTemp"> 83°F</span></h2></div>
-                <div class="vertical"></div>
-                <div class="col-6">
-                    <h3>
-            <strong>Air Quailty:</strong> Unhealthy
-            <br><br>
-            <strong>Chance of Rain:</strong> 10% 
-            <br><br>
-             <strong>Humidity:</strong> 87% 
-             <br><br>
-             <strong>Visibility:</strong> Low due to smokey conditions</h3></div>
-
+      <div class="row">
+        <div class="col">
+          <form id="search-form">
+            <input
+              type="text"
+              id="search"
+              placeholder=" Enter City or Zip Code "
+            />
+            <input type="submit" value="Search" id="buttn" />
+            <button id="currentLocation">Current Location</button>
+          </form>
+        </div>
       </div>
-    </div>
-    </div>
- </main>
- <section> 
-     <ul>
-        <li class="weekday">
-             Monday
-         </li>
-         <li class="weekday">
-             Tuesday
-         </li>
-         <li class="weekday">
-             Wednesday
-         </li>
-         <li class="weekday">
-             Thursday
-         </li>
-         
-         <li class="weekday">
-             Friday
-         </li>
-        <hr>
-     </ul>
-     <ul>
-         <li>
-            <li class="degrees">
-                80°F
-            </li>
-            <li class="degrees">
-                80°F
-            </li>
-         </li>
-        <li class="degrees">
+      <div class="row">
+        <div class="col">
+          <header id="date"></header>
+        </div>
+      </div>
+      <main>
+        <div class="row">
+          <div class="col">
+            <h1 id="currentCity">LOS ANGELES, CA</h1>
+            <h2>
+              <i class="fas fa-cloud-sun"></i>
+              <span class="currentTemp"> 83</span>
+            </h2>
+          </div>
+          <div class="vertical"></div>
+          <div class="col-6">
+            <h3>
+              <strong>Air Quailty:</strong> Unhealthy <br /><br />
+              <strong>Chance of Rain:</strong> 10% <br /><br />
+              <strong>Humidity:</strong> 87% <br /><br />
+              <strong>Visibility:</strong> Low due to smokey conditions
+            </h3>
+          </div>
+        </div>
+      </main>
+      <section>
+        <ul>
+          <li class="weekday">
+            Monday
+          </li>
+          <li class="weekday">
+            Tuesday
+          </li>
+          <li class="weekday">
+            Wednesday
+          </li>
+          <li class="weekday">
+            Thursday
+          </li>
+
+          <li class="weekday">
+            Friday
+          </li>
+        </ul>
+        <hr />
+        <ul>
+          <li class="degrees">
+            80°F
+          </li>
+          <li class="degrees">
+            80°F
+          </li>
+          <li class="degrees">
             84°F
-        </li>
-        <li class="degrees">
+          </li>
+          <li class="degrees">
             86°F
-         </li>
-        <li class="degrees">
+          </li>
+          <li class="degrees">
             88°F
-        </li>
-     </ul>
-    <ul>
-        <li><i class="fas fa-sun"></i></li>
-        <li><i class="fas fa-sun"></i></li>
-        <li><i class="fas fa-sun"></i></li>
-        <li><i class="fas fa-sun"></i></li>
-        <li><i class="fas fa-sun"></i></li>
-    </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><i class="fas fa-sun"></i></li>
+          <li><i class="fas fa-sun"></i></li>
+          <li><i class="fas fa-sun"></i></li>
+          <li><i class="fas fa-sun"></i></li>
+          <li><i class="fas fa-sun"></i></li>
+        </ul>
+      </section>
     </div>
-    </div>
- </section>
- </div>
- <script src="index.js">
- </script>
-</body>
+    <script src="src/index.js"></script>
+  </body>
 </html>
