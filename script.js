@@ -45,13 +45,22 @@ dateElement.innerHTML = `${day} ${month} ${date}, ${year} <br> ${hours}:${minute
 
 /// Weather and Temperature ///
 function showWeather(response) {
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${response.data.name}`;
-  let h2 = document.querySelector(".currentTemp");
-  let temperature = Math.round(response.data.main.temp);
-  h2.innerHTML = `${temperature}°F`;
-  let currentCity = document.querySelector("#currentCity");
-}
+    console.log(response.data);
+    let h1 = document.querySelector("h1");
+    h1.innerHTML = `${response.data.name}`;
+    let h2 = document.querySelector(".currentTemp");
+    let temperature = Math.round(response.data.main.temp);
+    h2.innerHTML = `${temperature}°F`;
+    let currentCity = document.querySelector("#currentCity");
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = ` ${response.data.main.humidity}%`;
+    let windElement = document.querySelector("#wind");
+    windElement.innerHTML = ` ${Math.round(response.data.wind.speed)} mph`;
+    let feelsElement = document.querySelector("#feels_like");
+    feelsElement.innerHTML = ` ${Math.round(response.data.main.feels_like)}°F`;
+    let highLowElement = document.querySelector("#high_lows");
+    highLowElement.innerHTML = `  ${Math.round(response.data.main.temp_max)}°F / ${Math.round(response.data.main.temp_min)}°F`;
+  }
 
 function handlePosition(position) {
   let apiKey = "431be991dd8c3478feb5f5569d2c8887";
