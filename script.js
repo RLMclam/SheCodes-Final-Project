@@ -41,7 +41,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-dateElement.innerHTML = `${day} ${month} ${date}, ${year} <br> ${hours}:${minutes}`;
+dateElement.innerHTML = ` ${day}   ✴  ${month} ${date}, ${year}   ✴   ${hours}:${minutes} `;
 
 /// Weather and Temperature ///
 function showWeather(response) {
