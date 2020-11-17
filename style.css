@@ -50,7 +50,7 @@ body {
   }
   h3 {
     position: relative;
-    padding-top: 10px;
+    padding-top: 18px;
     padding-left: 30px;
     font-weight: normal;
     font-size: 21px;
@@ -93,6 +93,11 @@ body {
       font-family: "Roboto", sans-serif;
   }
   
+  #header_title {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
   #search {
     background: rgb(232, 244, 254);
     color: rgb(0, 83, 147);
