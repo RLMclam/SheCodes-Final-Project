@@ -60,6 +60,12 @@ function showWeather(response) {
     feelsElement.innerHTML = ` ${Math.round(response.data.main.feels_like)}°F`;
     let highLowElement = document.querySelector("#high_lows");
     highLowElement.innerHTML = `  ${Math.round(response.data.main.temp_max)}°F / ${Math.round(response.data.main.temp_min)}°F`;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
   }
 
 function handlePosition(position) {
