@@ -86,10 +86,36 @@ function showCity(event) {
   let city = document.querySelector("#search").value;
   searchCity(city);
 }
+//forecast
+function dispalyForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="degrees">
+        <strong>
+          ${Math.round(forecast.main.temp_max)}°F
+        </strong>
+    </div>
+    <div>
+      <img class="weather-img"
+        src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/></div>
+        </div>
+      </div>
+  `;
+  }
+}
+
 function searchCity(city) {
   let apiKey = "431be991dd8c3478feb5f5569d2c8887";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(dispalyForecast);
 }
 
 let searchedCity = document.querySelector("#search-form");
