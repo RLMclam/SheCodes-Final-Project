@@ -140,6 +140,8 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 550;
   }
+
+
   .fa-cloud-sun {
     font-size: 95px;
     color: #ffac33;
@@ -162,22 +164,23 @@ body {
   }
   .degrees {
     text-align: center;
-    padding: 29px 12px;
+    
+    width: 80px;
+    line-height: 80px;
+  
     border: 2px solid orange;
     border-radius: 50%;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    font-size: 30px;
+    font-size: 23px;
     color: #016ec6;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     margin: 35px 22px;
   }
-  .fa-sun {
-    font-size: 50px;
-    color: #ffbd03;
-    padding: 0 29px;
-    margin-right: 0;
-    margin-left: 13px;
-    margin: 30px 15px;
-  }
   
+    
+  .weather-img{
+    display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+  }
