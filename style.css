@@ -40,6 +40,16 @@ body {
     color: #ff7043;
     font-family: "Roboto", sans-serif;
   }
+  small{
+    font-size: 13px;
+    opacity: .3;
+    color: rgb(0, 83, 147);
+    position: relative;
+    padding-left:25px;
+    margin: 0 auto;
+    font-style: italic;
+    
+  }
   h2 {
     text-align: center;
     position: relative;
@@ -143,11 +153,6 @@ body {
     font-weight: 550;
   }
 
-
-  .fa-cloud-sun {
-    font-size: 95px;
-    color: #ffac33;
-  }
 
   .vertical {
     border-left: 2.5px solid orange;
