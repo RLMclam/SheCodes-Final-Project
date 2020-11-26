@@ -52,6 +52,8 @@ function showWeather(response) {
     let temperature = Math.round(response.data.main.temp);
     h2.innerHTML = `${temperature}°F`;
     let currentCity = document.querySelector("#currentCity");
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = `${response.data.weather[0].description}`;
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = ` ${response.data.main.humidity}%`;
     let windElement = document.querySelector("#wind");
@@ -68,14 +70,16 @@ function showWeather(response) {
     iconElement.setAttribute("alt", response.data.weather[0].description);
   }
 
-function handlePosition(position) {
-  let apiKey = "431be991dd8c3478feb5f5569d2c8887";
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let units = "imperial";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
-  axios.get(url).then(showWeather);
-}
+  function handlePosition(position) {
+    let apiKey = "431be991dd8c3478feb5f5569d2c8887";
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let units = "imperial";
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+    axios.get(url).then(showWeather);
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(dispalyForecast);
+  }
 
 function getPosition(event) {
   event.preventDefault();
