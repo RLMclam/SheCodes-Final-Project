@@ -77,7 +77,10 @@ function handlePosition(position) {
   axios.get(url).then(showWeather);
 }
 
-navigator.geolocation.getCurrentPosition(handlePosition);
+function getPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
 
 //Search Button Weather and Temperature//
 
@@ -123,6 +126,11 @@ function searchCity(city) {
 
 let searchedCity = document.querySelector("#search-form");
 searchedCity.addEventListener("submit", showCity);
+
+
 //current location button
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", handlePosition);
+button.addEventListener("click", getPosition);
+
+searchCity("Los Angeles");
